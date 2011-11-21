@@ -6,7 +6,7 @@ module SimpleNavigation
   class Configuration
     include Singleton
 
-    attr_accessor :renderer, :selected_class, :active_leaf_class, :autogenerate_item_ids, :id_generator, :auto_highlight, :name_generator
+    attr_accessor :renderer, :selected_class, :active_leaf_class, :autogenerate_item_ids, :id_generator, :autogenerate_item_classes, :class_generator, :auto_highlight, :name_generator
     attr_reader :primary_navigation
 
     class << self
@@ -30,6 +30,8 @@ module SimpleNavigation
       @active_leaf_class = 'simple-navigation-active-leaf'
       @autogenerate_item_ids = true
       @id_generator = Proc.new {|id| id.to_s }
+      @autogenerate_item_classes = false
+      @class_generator = Proc.new {|id| nil }
       @name_generator = Proc.new {|name| name}
       @auto_highlight = true
     end

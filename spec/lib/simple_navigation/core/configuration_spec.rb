@@ -55,6 +55,9 @@ describe SimpleNavigation::Configuration do
     it "should set the id_generator" do
       @config.id_generator.should_not be_nil
     end
+    it "should set the class_generator" do
+      @config.class_generator.should_not be_nil
+    end
     it "should set the name_generator" do
       @config.name_generator.should_not be_nil
     end

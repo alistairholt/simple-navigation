@@ -21,6 +21,11 @@ SimpleNavigation::Configuration.run do |navigation|
   # To do this, define a Proc which takes the key of the current item as argument.
   # The example below would add a prefix to each key.
   # navigation.id_generator = Proc.new {|key| "my-prefix-#{key}"}
+  
+  # You can override the default logic that is used to autogenerate the item classes.
+  # To do this, define a Proc which takes the key of the current item as argument.
+  # The example below would add a prefix to each key.
+  # navigation.class_generator = Proc.new {|key| "my-prefix-#{key}"}
 
   # If you need to add custom html around item names, you can define a proc that will be called with the name you pass in to the navigation.
   # The example below shows how to wrap items spans.
